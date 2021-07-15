@@ -18,7 +18,7 @@ function App() {
     <div className="App">
       <h2>Expense Tracking System</h2>
       <Expenses expenses = {expenses}></Expenses>
-      <Expenses expeses = ""></Expenses>
+      
 
     </div>
   );
