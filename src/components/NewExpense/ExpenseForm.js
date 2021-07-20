@@ -3,21 +3,47 @@ import'./ExpenseForm.css';
 
 function ExpenseForm(){
 
-    const [enteredTitle, setEnteredTitle] = useState("");
-    const [enteredAmount, setEnteredAmount] = useState("");
-    const [enteredDate, setEnteredDate] = useState("");
+    // const [enteredTitle, setEnteredTitle] = useState("");
+    // const [enteredAmount, setEnteredAmount] = useState("");
+    // const [enteredDate, setEnteredDate] = useState("");
+
+    const [userInput, setUserInput] = useState(
+        {
+            enteredTitle : " ",
+            enteredAmount : " ",
+            enteredDate : " "
+        }
+    );
 
     function titleChangeHandler(event){
-          setEnteredTitle(event.target.value);  
+          setUserInput(
+            {
+                ...userInput, //old values
+                enteredTitle :event.target.value,  //updated
+                // enteredAmount : " ", //copied old values
+                // enteredDate : " " // copied old values
+            }
+          );  
     }
 
     function amountChangeHandler(event){
 
-        setEnteredAmount(event.target.value);
+        setUserInput(
+            {
+                ...userInput, //old values
+                enteredAmount :event.target.value,  //updated
+            }    
+          );  
     }
 
     function dateChangeHandler(event){
-        setEnteredDate(event.target.value);
+        setUserInput(
+            {
+                ...userInput, //old values
+                enteredDate :event.target.value,  //updated
+               
+            }
+          );  
 
     }
 
