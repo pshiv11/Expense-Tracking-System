@@ -11,22 +11,21 @@ function ExpenseItem(props) {
     // const day = props.date.toLocaleString('en-US', { day: '2-digit'});
     // const year = props.date.getFullYear();
     return (
+        <li>
+            <Card className = 'expense-item'>
 
-        <Card className = 'expense-item'>
+                <div> 
+                    <ExpenseDate date = {props.date}></ExpenseDate>
 
-            <div> 
-                <ExpenseDate date = {props.date}></ExpenseDate>
-
-            </div>
-            <div className="expense-item__description">
-                <h2>{props.title}</h2>
-                <div className="expense-item__price">${props.amount}</div>
-            </div>
-            
-        </Card>
-
+                </div>
+                <div className="expense-item__description">
+                    <h2>{props.title}</h2>
+                    <div className="expense-item__price">${props.amount}</div>
+                </div>
+                
+            </Card>
+        </li>
     );
-
 }
 
 export default ExpenseItem;
